@@ -11,7 +11,7 @@ git clone https://github.com/jiawangbai/Versatile-Weight-Attack.git
 
 ## Run Our Code
 
-### Single Sample Attack
+### Single Sample Attack (SSA)
 Set the "cifar_root" in the "config.py" firstly.
 
 Running the below command will attack a sample (3676-th sample in the CIFAR-10 validation set) into class 0.
@@ -19,7 +19,7 @@ Running the below command will attack a sample (3676-th sample in the CIFAR-10 v
 cd single_sample_attack
 python SSA.py --target-class 0 --attack-idx 3676 --lam 100 --k 5
 ```
-You can set "target-class" and "attack-idx" to perform TA-LBF on a specific sample.
+You can set "target-class" and "attack-idx" to perform SSA on a specific sample.
 
 Running the below command can reproduce our results in attacking the 8-bit quantized ResNet on CIFAR-10 with the parameter searching strategy introduced in the paper.
 ```shell
@@ -41,14 +41,14 @@ Format:
 where "sample-index" is the index of this attacked sample in CIFAR-10 validation set.
 
 
-### Triggered Samples Attack
+### Triggered Samples Attack (TSA)
 
-Running the below command can reproduce our results in attacking the 8-bit quantized ResNet on CIFAR-10 with the parameter searching strategy introduced in the paper.
+Running the below command will attack all samples with a trigger (CIFAR-10 validation set) into class 0.
 ```shell
 cd triggered_samples_attack
-python TSA.py 
+python TSA.py --target 0
 ```
-
+You can set "target" to perform TSA with different target class.
 
 ## Others
 We provide the pretrained 8-bit quantized ResNet on CIFAR-10. -> "cifar_resnet_quan_8/model.th"
