@@ -9,7 +9,9 @@ The implementatin of *Versatile Weight Attack via Flipping Limited Bits*, includ
 git clone https://github.com/jiawangbai/Versatile-Weight-Attack.git
 ```
 
-## Quick Start
+## Run Our Code
+
+### Single Sample Attack
 Set the "cifar_root" in the "config.py" firstly.
 
 Running the below command will attack a sample (3676-th sample in the CIFAR-10 validation set) into class 0.
@@ -38,6 +40,9 @@ Format:
 &emsp; [target-class, sample-index] ]
 <br/>
 where "sample-index" is the index of this attacked sample in CIFAR-10 validation set.
+
+
+### Triggered Samples Attack
 
 ## Others
 We provide the pretrained 8-bit quantized ResNet on CIFAR-10. -> "cifar_resnet_quan_8/model.th"
