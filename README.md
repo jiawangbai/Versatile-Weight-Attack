@@ -6,7 +6,7 @@ The implementatin of *Versatile Weight Attack via Flipping Limited Bits*, includ
 1. Install PyTorch >= 1.5
 2. Clone this repo:
 ```shell
-git clone https://github.com/jiawangbai/TA-LBF.git
+git clone https://github.com/jiawangbai/Versatile-Weight-Attack.git
 ```
 
 ## Quick Start
