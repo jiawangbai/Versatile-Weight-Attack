@@ -21,9 +21,6 @@ python attack_one.py --target-class 0 --attack-idx 3676 --lam 100 --k 5
 ```
 You can set "target-class" and "attack-idx" to perform TA-LBF on a specific sample.
 
-## Reproduce Our Results
-Set the "cifar_root" in the "config.py" firstly.
-
 Running the below command can reproduce our results in attacking the 8-bit quantized ResNet on CIFAR-10 with the parameter searching strategy introduced in the paper.
 ```shell
 cd single_sample_attack
