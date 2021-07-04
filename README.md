@@ -17,14 +17,14 @@ Set the "cifar_root" in the "config.py" firstly.
 Running the below command will attack a sample (3676-th sample in the CIFAR-10 validation set) into class 0.
 ```shell
 cd single_sample_attack
-python attack_one.py --target-class 0 --attack-idx 3676 --lam 100 --k 5
+python SSA.py --target-class 0 --attack-idx 3676 --lam 100 --k 5
 ```
 You can set "target-class" and "attack-idx" to perform TA-LBF on a specific sample.
 
 Running the below command can reproduce our results in attacking the 8-bit quantized ResNet on CIFAR-10 with the parameter searching strategy introduced in the paper.
 ```shell
 cd single_sample_attack
-python attack_reproduce.py 
+python SSA_reproduce.py 
 ```
 "cifar_attack_info.txt" includes the 1,000 attacked samples and their target classes used in our experiments.
 <br/>
@@ -42,6 +42,13 @@ where "sample-index" is the index of this attacked sample in CIFAR-10 validation
 
 
 ### Triggered Samples Attack
+
+Running the below command can reproduce our results in attacking the 8-bit quantized ResNet on CIFAR-10 with the parameter searching strategy introduced in the paper.
+```shell
+cd triggered_samples_attack
+python TSA.py 
+```
+
 
 ## Others
 We provide the pretrained 8-bit quantized ResNet on CIFAR-10. -> "cifar_resnet_quan_8/model.th"
