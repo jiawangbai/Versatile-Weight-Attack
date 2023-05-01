@@ -1,6 +1,8 @@
 # Versatile-Weight-Attack
 The implementatin of *Versatile Weight Attack via Flipping Limited Bits*, including *Singel Sample Attack* and *Triggered Samples Attack*.
 
+## Updates
+[2023/05/01] 
 
 ## Install 
 1. Install PyTorch >= 1.5
