@@ -2,7 +2,8 @@
 The implementatin of *Versatile Weight Attack via Flipping Limited Bits*, including *Singel Sample Attack* and *Triggered Samples Attack*.
 
 ## Updates
-[2023/05/01] 
+[2023/05/01] The attacks against full-precision netoworks (their weights are
+in 32-bit floating point format) have been added to the folders "single_sample_attack_float" and "triggered_samples_attack_float".
 
 ## Install 
 1. Install PyTorch >= 1.5
@@ -43,6 +44,11 @@ Format:
 <br/>
 where "sample-index" is the index of this attacked sample in CIFAR-10 validation set.
 
+Running the below command will attack the full-precision network.
+```shell
+cd single_sample_attack_float/
+python SSA.py --target-class 0 --attack-idx 3676 --lam 50 --k 5
+```
 
 ### Triggered Samples Attack (TSA)
 
@@ -60,8 +66,14 @@ cd triggered_samples_attack/
 sh run.sh [gpu-id]
 ```
 
+Running the below command will attack the full-precision network.
+```shell
+cd triggered_samples_attack_float/
+python TSA.py --target 0
+```
+
 ## Others
-We provide the pretrained 8-bit quantized ResNet on CIFAR-10. -> "cifar_resnet_quan_8/model.th"
+We provide the pretrained 8-bit quantized ResNet on CIFAR-10. -> "cifar_resnet_quan_8/model.th" and the pretrained full-precision ResNet on CIFAR-10. -> "cifar_resnet_float/model.th"
 
 Python version is 3.6.10 and the main requirments are below:
 <br/>
